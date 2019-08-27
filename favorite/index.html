@@ -81,13 +81,13 @@
 
 <meta name="keywords" content="Lilac Learning Readeing Writing">
 <meta property="og:type" content="website">
-<meta property="og:title" content="favorite">
+<meta property="og:title" content="收藏">
 <meta property="og:url" content="https://lilacouyang.github.io/favorite/index.html">
 <meta property="og:site_name" content="Lilac">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-27T08:08:22.866Z">
+<meta property="og:updated_time" content="2019-08-27T08:39:42.594Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="favorite">
+<meta name="twitter:title" content="收藏">
 
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <title>favorite | Lilac</title>
+  <title>收藏 | Lilac</title>
   
 
 
@@ -274,7 +274,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">favorite</h1>
+	<h1 class="post-title" itemprop="name headline">收藏</h1>
 
 
 
@@ -781,13 +781,13 @@
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'favorite'.length > 0
+      var isPost = '收藏'.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = 'favorite'
+        var title = '收藏'
         var doc = articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
