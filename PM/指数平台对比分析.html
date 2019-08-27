@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="Chinese">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content=",,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="微信指数进入路径：在微信搜索栏，搜索微信指数，进入小程序  功能：7日、30日、90日的微信指数，可以多词对比。  微信指数出现最晚，目前的功能还比较少，最长才90天。  微信指数可以怎么用？ 用法1：我们可以看到指数的变化很明显。如果你的品牌最近在微信平台有做推广，那么通过指数就可以看出推广的影响力度。  用法2：如果品牌没有做推广，那么指数说明了自然热度，可以每过3个月，就把图截下来，作为基准">
+<meta name="keywords" content="产品经理,数据分析">
+<meta property="og:type" content="website">
+<meta property="og:title" content="指数平台对比分析">
+<meta property="og:url" content="https://lilacouyang.github.io/PM/指数平台对比分析.html">
+<meta property="og:site_name" content="Lilac">
+<meta property="og:description" content="微信指数进入路径：在微信搜索栏，搜索微信指数，进入小程序  功能：7日、30日、90日的微信指数，可以多词对比。  微信指数出现最晚，目前的功能还比较少，最长才90天。  微信指数可以怎么用？ 用法1：我们可以看到指数的变化很明显。如果你的品牌最近在微信平台有做推广，那么通过指数就可以看出推广的影响力度。  用法2：如果品牌没有做推广，那么指数说明了自然热度，可以每过3个月，就把图截下来，作为基准">
+<meta property="og:locale" content="Chinese">
+<meta property="og:updated_time" content="2019-08-27T06:15:42.068Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="指数平台对比分析">
+<meta name="twitter:description" content="微信指数进入路径：在微信搜索栏，搜索微信指数，进入小程序  功能：7日、30日、90日的微信指数，可以多词对比。  微信指数出现最晚，目前的功能还比较少，最长才90天。  微信指数可以怎么用？ 用法1：我们可以看到指数的变化很明显。如果你的品牌最近在微信平台有做推广，那么通过指数就可以看出推广的影响力度。  用法2：如果品牌没有做推广，那么指数说明了自然热度，可以每过3个月，就把图截下来，作为基准">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lilacouyang.github.io/PM/指数平台对比分析.html">
+
+
+
+
+
+  <title>指数平台对比分析 | Lilac</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b9e3be0ec48968d3210e02ede0ceaab1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="Chinese">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://lilacouyang.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lilac</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">The web home for Lilac</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-favorite">
+          <a href="/favorite/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br>
+            
+            favorite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-pm">
+          <a href="/PM/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-product-hunt"></i> <br>
+            
+            pm
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline">指数平台对比分析</h1>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <h3 id="微信指数"><a href="#微信指数" class="headerlink" title="微信指数"></a>微信指数</h3><p><strong>进入路径</strong>：在微信搜索栏，搜索微信指数，进入小程序 </p>
+<p><strong>功能</strong>：7日、30日、90日的微信指数，可以多词对比。 </p>
+<p>微信指数出现最晚，目前的功能还比较少，最长才90天。 </p>
+<p><strong>微信指数可以怎么用？</strong></p>
+<p>用法1：我们可以看到指数的变化很明显。如果你的品牌最近在微信平台有做推广，那么通过指数就可以看出推广的影响力度。 </p>
+<p>用法2：如果品牌没有做推广，那么指数说明了自然热度，可以每过3个月，就把图截下来，作为基准值。对比一段时间，就可以看出品牌的知名度是不是有提升。 </p>
+<p>在推广期，微博指数的提升是很明显的。和百度指数不同，微博指数是关键词被提及的结果，而百度指数是搜索的次数。明白这二者的区别吗？前者：与你的宣传力度直接相关；而后者：是宣传使用户主动搜索了解的结果。 </p>
+<h3 id="微博指数"><a href="#微博指数" class="headerlink" title="微博指数"></a>微博指数</h3><p><strong>进入路径</strong>：<a href="http://data.weibo.com/index" target="_blank" rel="noopener">http://data.weibo.com/index</a> </p>
+<p><strong>功能</strong>：1个月、3个月、6个月、自定义时间的热词趋势，可以多词对比。可以查看分地域占比；查看性别与年龄占比；可以区分PC和移动趋势。微博指数功能更多一些，支持时段长达1年以上。不过可搜索词的范围要小于微信，我的经验是，特别知名的品牌和娱乐人物是最容易出结果的，其他的词就需要碰碰运气了。 </p>
+<p><strong>微博指数可以怎么用？</strong></p>
+<p><strong>用法1</strong>：微博是娱乐圈的重要阵地，如果你考虑和某个明星合作，可以参考指数评估他的影响力。也可以参考指数和报价的关系来评估性价比。我们通过指数的趋势，可以看出他/她是不是最近窜升。 </p>
+<p><strong>用法2</strong>：如果你还没有在微博做过推广，可以用指数作为基准值。同时对比竞争对手和与行业TOP的差距。表现好的品牌，说明微博活跃度高，可以学习他们的运营方法。 </p>
+<p>在推广期，微博指数的提升是很明显的。和百度指数不同，微博指数是关键词被提及的结果，而百度指数是搜索的次数。明白这二者的区别吗？前者：与你的宣传力度直接相关；而后者：是宣传使用户主动搜索了解的结果。 </p>
+<p>所以当你看到微博指数有较大提升，不要高兴太在，因为来的快去的也快，还是要注意后续趋势。 </p>
+<p><strong>用法3</strong>：微博可以提供地域、性别、年龄的占比（下图）。可以评估品牌受众和你的预期是否一致。 </p>
+<p>如果你的品牌有战略转型，针对地域、性别、年龄段方面的针对性推广，可以进行长期对比，看是否有效果。 </p>
+<p><strong>用法4</strong>：查看分时数据。 </p>
+<p>这是微博指数独有功能。可以细分到一天每个小时。 微博是一个实时互动媒体，你做了什么推广动作，用户的反馈非常快。有了这张实时图，你可以了解用户一般在什么时候与你的品牌互动。以及推广活动后，大概多久用户会有反馈。更精准的评估推广渠道效果。 </p>
+<h3 id="百度指数"><a href="#百度指数" class="headerlink" title="百度指数"></a>百度指数</h3><p><strong>进入路径</strong>：<a href="https://index.baidu.com/" target="_blank" rel="noopener">https://index.baidu.com/</a> </p>
+<p><strong>功能</strong>：7天、30天、90天、半年、有史以来的热词趋势，可以多词对比。查看分地域占比；查看性别与年龄占比；需求图谱；来源和去向词。可以区分PC和移动趋势。百度指数是最早出现的，可查看的时间段也最久，功能最多。虽然因为双微渠道的发展，百度指数的作用似乎有些削弱。但如果你在线下、传统网络媒体和平面媒体进行宣传，百度指数还是很好的评估工具。百度指数最长pc端最长可以从06年看起；移动端可以从2011年看起。 </p>
+<p><strong>百度指数可以怎么用？</strong></p>
+<p><strong>用法1</strong>：查看自己的品牌在一段时间内的指数绝对值。在未推广情况下，得到基准值，如果发现长期趋势下降，就说明品牌关注度降低了。 </p>
+<p><strong>用法2</strong>：在推广时，对比推广力度和指数变化区间。经过几次推广，可以评估推广的效率。每次推广如何使用了不同的媒体渠道，也可以从侧面反映出媒体对网民的影响力。 </p>
+<p>这个方法适用于每年推广次数较为频繁的品牌。 </p>
+<p><strong>用法3</strong>：查看和品牌相关的行业词，或者你想主打的品牌理念。比如下图是“中国风”和“共享服装”的对比。可以看出“中国风”的热度是缓慢增长，而共享服装在8月之前默默无闻，8月下旬出了一个高点之后就有了一定稳定热度。共享服装的模式现在中国已经有案例，但总体看依然属于开拓期，用户心中还没有这个概念。再比如“环保时尚”这个词都没有指数，说明知名度更低。如果你想打这个概念就比较难，需要很长时间来教育用户。 </p>
+<p>神奇的功能：需求图谱</p>
+<p>需求图谱来自用户在搜索品牌词之前，之后经常搜索的词。其中圆圈越大说明搜索越多，离中心的大圆圈越近，说明相关度越高。从中，我们可以看出一个用户会把你的品牌词和哪些词关联起来。不知大家是否知道，我们的记忆系统，对于概念名词，是成组来记忆的（感兴趣的可以看下消费者心理学的相关知识），比如麦当劳+汉堡包+黄色m标志。所以，如果你可以把自己的名字和某个消费需求或者是形象，放到用户的记忆组里，用户就更容易想起你的名字。 </p>
+<p><strong>用法4</strong>：你的哪个品类是用户最关心的？从上图我们可以看出，对于Loro Piana这个品牌，人们最关心的是围巾。如果换成Dior，我们会发现，搜索最多的是口红。这说明通过一贯的宣传，围巾和口红已经成为明星品类。 </p>
+<p><strong>用法5</strong>：哪些品牌是你的竞争对手？ 或者说，你可以抱谁的大腿？ </p>
+<p>同样从这个图里，我们能看出Loro Piana 会和LV ,Maxmara，Brunello cucinelli这样的品牌，一起被搜索。这说明用户知道，这几个牌子的产品或定位类似，会一起比较。 </p>
+<p>如果没有相关词呢？从一个侧面，说明你的定位不是那么清晰。用户无法把你归类 </p>
+<ul>
+<li>还有哪些品牌，会经常和你的品牌一起搜索？你们有哪些相似？ </li>
+<li>如果你没有和行业TOP品牌绑定在一起，你该怎么办？ </li>
+</ul>
+<h3 id="阿里指数"><a href="#阿里指数" class="headerlink" title="阿里指数"></a>阿里指数</h3><p>阿里指数有2个，第一个是阿里巴巴主站版本。第二个是Beta版，替代原来的“淘宝指数”。与前3个指数不同的是，阿里指数来源于和交易相关的数据，而非搜索和阅读曝光的数据。 </p>
+<p>阿里指数反应的是购买和供应需求的热度；而微信、微博、百度反应的是注意力的热度。</p>
+<h4 id="阿里巴巴主站版本"><a href="#阿里巴巴主站版本" class="headerlink" title="阿里巴巴主站版本"></a>阿里巴巴主站版本</h4><p><strong>进入路径</strong>：<a href="https://index.1688.com" target="_blank" rel="noopener">https://index.1688.com</a> </p>
+<p><strong>功能</strong>：包括服装在内的数十个大类，最近1年，在1688市场搜索指数趋势；每个细分品类，不同营销属性、不同基础属性、不同价格带的搜索热度；每个细分品类，搜索词、产品、公司的搜索热度。 </p>
+<p><strong>阿里指数可以怎么用？</strong></p>
+<p><strong>用法1</strong>：了解求购热度，预估商品开发、上、下架节奏。 </p>
+<p>从上图，我们可以看出女士毛呢外套，从7月下旬搜索热度增加，到10月下旬需求出现了高峰。而这时商品供应数没有及时跟上，直到11月底才追上。说明10月-11月，如果能及时上架产品，可以抓住求购的先机。 </p>
+<p><strong>用法2</strong>：了解哪些商品属性最受欢迎。辅助产品企划和文案。在阿里排行栏目，提供了搜索词排行榜，可以把榜单下载下来。 从这些搜索词里，我们可以发掘对款式、面料的需求。 </p>
+<p><strong>用法3</strong>：发现有实力的供货商。同样在这个栏目，我们还可以查看这个类目下，哪些供应商的商品交易量最大。帮助我们寻找靠谱供货商。 </p>
+<h4 id="阿里指数-Beta版"><a href="#阿里指数-Beta版" class="headerlink" title="阿里指数-Beta版"></a>阿里指数-Beta版</h4><p>Beta版与阿里指数版的区别是数据源不同，算法模型不同，Beta版的数据是淘系数据。（个人推测是指淘宝、天猫数据，但官方没有明确说明） </p>
+<p><strong>Beta版进入路径</strong>：<a href="https://alizs.taobao.com" target="_blank" rel="noopener">https://alizs.taobao.com</a> </p>
+<p><strong>功能</strong>：男装、女装等5大类，最近7天的搜索词热度；热门销售地区，买家年龄、性别占比。提供分省的热门类目，热门搜索词和省与省热门交易类目。从功能对比看，Beta版披露的数据维度，和时间段非常有限，而优势是包括了一些买家数据，分省数据。 </p>
+<p><strong>阿里指数-Beta版可以怎么用？</strong></p>
+<p>用法1：通过搜索词了解用户需求，调整商品标题和文案。因为数据只有7天，可以每周看一次。 </p>
+<p>用法2：发现用户热搜的品牌，作为行业标杆学习。 </p>
+<p>用法3：了解某个品类买家的年龄占比和地域。 </p>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Lilac</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#微信指数"><span class="nav-number">1.</span> <span class="nav-text">微信指数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微博指数"><span class="nav-number">2.</span> <span class="nav-text">微博指数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#百度指数"><span class="nav-number">3.</span> <span class="nav-text">百度指数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阿里指数"><span class="nav-number">4.</span> <span class="nav-text">阿里指数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#阿里巴巴主站版本"><span class="nav-number">4.1.</span> <span class="nav-text">阿里巴巴主站版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阿里指数-Beta版"><span class="nav-number">4.2.</span> <span class="nav-text">阿里指数-Beta版</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lilac</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: '3mq0IwEVJXVuUieXmjx8xhFx-gzGzoHsz',
+        appKey: 'J1W3bQg50lfcFl90VIicUwBg',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
