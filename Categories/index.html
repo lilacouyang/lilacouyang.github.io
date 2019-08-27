@@ -80,13 +80,13 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Categories">
+<meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/Categories/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-26T13:26:50.529Z">
+<meta property="og:updated_time" content="2019-08-27T00:58:20.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Categories">
+<meta name="twitter:title" content="Hexo">
 
 
 
@@ -122,7 +122,7 @@
 
 
 
-  <title>Categories | Hexo</title>
+  <title>Category | Hexo</title>
   
 
 
@@ -273,7 +273,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">Categories</h1>
+	<h1 class="post-title" itemprop="name headline"></h1>
 
 
 
@@ -285,7 +285,14 @@
       <div class="post-body">
         
         
-          
+          <div class="category-all-page">
+            <div class="category-all-title">
+                No categories
+            </div>
+            <div class="category-all">
+              
+            </div>
+          </div>
         
       </div>
       
@@ -303,10 +310,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -559,6 +562,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: '3mq0IwEVJXVuUieXmjx8xhFx-gzGzoHsz',
+        appKey: 'J1W3bQg50lfcFl90VIicUwBg',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
