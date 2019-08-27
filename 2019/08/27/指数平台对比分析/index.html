@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Lilac">
 <meta property="og:description" content="微信指数进入路径：在微信搜索栏，搜索微信指数，进入小程序  功能：7日、30日、90日的微信指数，可以多词对比。  微信指数出现最晚，目前的功能还比较少，最长才90天。  微信指数可以怎么用？ 用法1：我们可以看到指数的变化很明显。如果你的品牌最近在微信平台有做推广，那么通过指数就可以看出推广的影响力度。  用法2：如果品牌没有做推广，那么指数说明了自然热度，可以每过3个月，就把图截下来，作为基准">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-27T06:15:42.068Z">
+<meta property="og:updated_time" content="2019-08-27T07:26:00.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="指数平台对比分析">
 <meta name="twitter:description" content="微信指数进入路径：在微信搜索栏，搜索微信指数，进入小程序  功能：7日、30日、90日的微信指数，可以多词对比。  微信指数出现最晚，目前的功能还比较少，最长才90天。  微信指数可以怎么用？ 用法1：我们可以看到指数的变化很明显。如果你的品牌最近在微信平台有做推广，那么通过指数就可以看出推广的影响力度。  用法2：如果品牌没有做推广，那么指数说明了自然热度，可以每过3个月，就把图截下来，作为基准">
@@ -109,9 +109,9 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
+      applicationID: 'M4FE8JC0M9',
       apiKey: '',
-      indexName: '',
+      indexName: 'LilacBlog',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -263,9 +263,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -475,6 +513,35 @@
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks for your reward.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/Wechatpay.png" alt="Lilac 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/AliPay.png" alt="Lilac 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -866,6 +933,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
