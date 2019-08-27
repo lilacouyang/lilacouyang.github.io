@@ -1989,7 +1989,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #54e428;
+  background: #5be9ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3156,4 +3156,32 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+.site-meta {
+  background: #ec7571;
+}
+.site-title {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.posts-collapse .post-meta {
+  position: absolute;
+  font-size: 12px;
+  left: 20px;
+  top: 2px;
+}
+.posts-collapse .post-title {
+  margin-left: 80px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: inherit;
+}
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body p a:hover {
+  color: #ff106c;
+  text-decoration: underline;
 }
