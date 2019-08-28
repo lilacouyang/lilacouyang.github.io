@@ -81,13 +81,13 @@
 
 <meta name="keywords" content="Lilac Learning Readeing Writing">
 <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
+<meta property="og:title" content="文章分类">
 <meta property="og:url" content="https://lilacouyang.github.io/categories/index.html">
 <meta property="og:site_name" content="Lilac">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-27T13:15:10.965Z">
+<meta property="og:updated_time" content="2019-08-28T00:37:05.537Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="文章分类">
 
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <title>分类 | Lilac</title>
+  <title>文章分类 | Lilac</title>
   
 
 
@@ -211,7 +211,7 @@
       
         
         <li class="menu-item menu-item-pm">
-          <a href="/categories/PM/" rel="section">
+          <a href="/PM/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-product-hunt"></i> <br>
             
@@ -226,6 +226,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
           </a>
         </li>
       
@@ -281,7 +291,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
+	<h1 class="post-title" itemprop="name headline">文章分类</h1>
 
 
 
@@ -293,7 +303,14 @@
       <div class="post-body">
         
         
-          
+          <div class="category-all-page">
+            <div class="category-all-title">
+                目前共计 1 个分类
+            </div>
+            <div class="category-all">
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/产品经理/">产品经理</a><span class="category-list-count">1</span></li></ul>
+            </div>
+          </div>
         
       </div>
       
@@ -355,6 +372,15 @@
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -779,13 +805,13 @@
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = '分类'.length > 0
+      var isPost = '文章分类'.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = '分类'
+        var title = '文章分类'
         var doc = articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
