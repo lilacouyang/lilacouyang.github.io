@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="产品经理,竞品分析,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本文通过对比分析即构、声网和Vivox三款语音SDK产品的官方接入文档在结构、内容等方面的异同，以了解当前市场上主流语音SDK产品的接入文档所采用的结构和包含的要素，以便在重构GVoice官方接入文档时能学习其优秀经验。">
+<meta name="keywords" content="产品经理,竞品分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="接入文档竞品分析">
+<meta property="og:url" content="1.117.42.182/2021/06/01/接入文档竞品分析/index.html">
+<meta property="og:site_name" content="Lilac&#39;s Blog">
+<meta property="og:description" content="本文通过对比分析即构、声网和Vivox三款语音SDK产品的官方接入文档在结构、内容等方面的异同，以了解当前市场上主流语音SDK产品的接入文档所采用的结构和包含的要素，以便在重构GVoice官方接入文档时能学习其优秀经验。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://user-images.githubusercontent.com/17395552/120298125-60696880-c2fc-11eb-9b46-81d3505f6f3b.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/17395552/120298134-63645900-c2fc-11eb-9b3a-36afc63e5cb9.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/17395552/120298138-652e1c80-c2fc-11eb-80c8-a922d63bbf56.png">
+<meta property="og:updated_time" content="2021-06-01T09:41:31.814Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="接入文档竞品分析">
+<meta name="twitter:description" content="本文通过对比分析即构、声网和Vivox三款语音SDK产品的官方接入文档在结构、内容等方面的异同，以了解当前市场上主流语音SDK产品的接入文档所采用的结构和包含的要素，以便在重构GVoice官方接入文档时能学习其优秀经验。">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/17395552/120298125-60696880-c2fc-11eb-9b46-81d3505f6f3b.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'M4FE8JC0M9',
+      apiKey: '72679fe9b7a2d99c540ae0ca71120401',
+      indexName: 'LilacBlog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="1.117.42.182/2021/06/01/接入文档竞品分析/">
+
+
+
+
+
+  <title>接入文档竞品分析 | Lilac's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b9e3be0ec48968d3210e02ede0ceaab1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/littleshuang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lilac's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">The web home for Lilac</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<style>
+    .pace .pace-progress {
+        background: #ec7571; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #ec7571, 0 0 5px #ec7571; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #ec7571;    /*上边框颜色*/
+        border-left-color: #ec7571;    /*左边框颜色*/
+    }
+</style>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="1.117.42.182/2021/06/01/接入文档竞品分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lilac">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lilac's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">接入文档竞品分析</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-01T16:56:26+08:00">
+                2021-06-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/source/categories/产品经理/" itemprop="url" rel="index">
+                    <span itemprop="name">产品经理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+             <span id="/2021/06/01/接入文档竞品分析/" class="leancloud_visitors" data-flag-title="接入文档竞品分析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                <span title="字数统计">
+                  2k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                <span title="阅读时长">
+                  6min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文通过对比分析即构、声网和Vivox三款语音SDK产品的官方接入文档在结构、内容等方面的异同，以了解当前市场上主流语音SDK产品的接入文档所采用的结构和包含的要素，以便在重构GVoice官方接入文档时能学习其优秀经验。</p>
+<a id="more"></a>
+
+<h1 id="竞品分析目的"><a href="#竞品分析目的" class="headerlink" title="竞品分析目的"></a><strong>竞品分析目的</strong></h1><p>2018年公司提出游戏出海战略，作为游戏中台部门，为了进一步提升游戏研发，尤其是游戏出海的效率，部门决定整合游戏接入过程中所有需要使用到的组件，为游戏业务提供统一的接入服务。在该背景下，GVoice组件需要下架原有官方文档，并在GCloud的统一官网内部提供新的官方文档。考虑到GVoice此前的接入文档结构不够清晰，内容不够完善，且由于文档采用分平台单独提供所有内容的形式，导致文档包含很多重复内容，维护非常不方便，因此在经过慎重考虑后，决定借此机会对文档结构进行重构。</p>
+<p>为了能够在进行重构前，充分考虑开发者习惯，学习行业领先者的优秀经验，以便在重构后能够给使用GVoice产品的开发者提供更清晰简洁且具有实际价值的文档内容，遂开展此次竞品接入文档分析工作。</p>
+<h1 id="竞品选择"><a href="#竞品选择" class="headerlink" title="竞品选择"></a><strong>竞品选择</strong></h1><p>考虑到GVoice是一款语音SDK产品，因此主要选择业界优秀语音SDK产品的接入文档进行对比分析，而此前也有对即构、声网、Vivox这三款语音领域的领先产品进行全面的竞品分析，对这几款产品也比较熟悉。因此，本次依旧选择即构、声网和Vivox这三款产品的接入文档进行对比分析。</p>
+<h1 id="文档结构对比"><a href="#文档结构对比" class="headerlink" title="文档结构对比"></a><strong>文档结构对比</strong></h1><p>下面三张图片分别是即构、声网和Vivox的接入文档结构图。<br>| <img src="https://user-images.githubusercontent.com/17395552/120298125-60696880-c2fc-11eb-9b46-81d3505f6f3b.png" alt="img"> | <img src="https://user-images.githubusercontent.com/17395552/120298134-63645900-c2fc-11eb-9b3a-36afc63e5cb9.png" alt="img"> |<br>| ———————————————————— | ———————————————————— |<br>| <img src="https://user-images.githubusercontent.com/17395552/120298138-652e1c80-c2fc-11eb-80c8-a922d63bbf56.png" alt="img"> |                                                              |</p>
+<p>从上面三个文档结构图可以看出，这三款产品的接入文档结构清晰，命名简明易懂，能够让开发者更方便快捷地从众多信息中找到自己所需的那一部分内容。其中，即构和声网接入文档的一级模块目录划分粒度比较细，而Vivox接入文档的一级模块目录划分颗粒度比较粗，相较而言，前者的目录划分方式内容查询入口更浅，且更符合开发者的查阅习惯，因此更有助于提升开发者效率。</p>
+<p>其次，即构和Vivox均在接入文档中提供了关于示例应用的说明，而声网是在官网的另一个模块专门介绍示例应用。前者更加符合开发者的接入习惯，当开发者通过产品简介了解完产品功能和应用场景后，可能会希望能够下载示例应用体验产品功能，以决定是否采纳该产品。因此，如果在接入文档中加入关于示例应用的说明或链接，能更利于开发者体验产品功能。</p>
+<p>最后，这三款产品都采用了根据功能模块来提供接入指引的方式，且都划分了基础功能和高级功能，这样的模块划分方式与业务产品功能接入流程是比较相符的。一般而言，我们在使用第三方产品提供的功能时，会先了解并接入其基础功能，在基础功能接入完成，且表现良好，性能稳定时，才会考虑在此基础上进行优化和完善，接入其高级功能。并且我们在接入某一功能时，会希望与该功能相关的所有内容均能聚合在一起，便于查阅，而与该功能不相关的内容则不会关心。</p>
+<h1 id="模块详细对比"><a href="#模块详细对比" class="headerlink" title="模块详细对比"></a><strong>模块详细对比</strong></h1><p>为了进一步对比这三款产品接入文档所提供内容的差异，因此整理了如下产品模块对比表。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>即构</th>
+<th>声网</th>
+<th>Vivox</th>
+<th></th>
+<th>即构</th>
+<th>声网</th>
+<th>Vivox</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>产品介绍</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>常见问题</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>特性指标</td>
+<td>√</td>
+<td>√</td>
+<td>X</td>
+<td>错误码</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>平台兼容</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>API列表</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>限制说明</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>计费说明</td>
+<td>X</td>
+<td>√</td>
+<td>X</td>
+</tr>
+<tr>
+<td>下载示例源码</td>
+<td>√</td>
+<td>X</td>
+<td>X</td>
+<td>最佳实践</td>
+<td>X</td>
+<td>√</td>
+<td>X</td>
+</tr>
+<tr>
+<td>更新历史</td>
+<td>√</td>
+<td>√</td>
+<td>X</td>
+<td>校验用户权限</td>
+<td>X</td>
+<td>√</td>
+<td>X</td>
+</tr>
+<tr>
+<td>快速开始</td>
+<td>√</td>
+<td>√</td>
+<td>X</td>
+<td>体验等级协议</td>
+<td>X</td>
+<td>√</td>
+<td>X</td>
+</tr>
+<tr>
+<td>基础功能介绍</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>新产品</td>
+<td>X</td>
+<td>√</td>
+<td>X</td>
+</tr>
+<tr>
+<td>进阶功能介绍</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>术语</td>
+<td>X</td>
+<td>X</td>
+<td>√</td>
+</tr>
+<tr>
+<td>功能应用场景</td>
+<td>√</td>
+<td>√</td>
+<td>X</td>
+<td>类模式</td>
+<td>X</td>
+<td>X</td>
+<td>√</td>
+</tr>
+<tr>
+<td>功能示例源码</td>
+<td>√</td>
+<td>X</td>
+<td>X</td>
+<td>更新指引</td>
+<td>X</td>
+<td>X</td>
+<td>√</td>
+</tr>
+<tr>
+<td>使用步骤</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>从上面产品模块对比表可以看出：</p>
+<ol>
+<li>即构、声网和Vivox这三款产品的接入文档中均包含了产品介绍、平台兼容、限制说明、基础功能介绍、进阶功能介绍、前提条件、使用步骤、常见问题、错误码和API列表等内容说明，这从侧面说明这几项内容是开发者在接入产品功能过程中比较关心的点，我们在重构文档时应尽可能将这几部分内容涵盖进来；</li>
+<li>即构的产品接入文档除了包含上述共性文档模块外，还提供了下载SDK和下载示例源码的功能，这两个功能能够方便开发者下载体验产品。不过此处可以考虑提供下载SDK和示例源码入口，而非直接提供下载内容，这样可以确保整个官方网站只有一个资源下载入口，降低维护过程中出现版本不匹配的可能性；</li>
+<li>声网提供的计费说明模块能让产品使用者了解当前产品的计费模式，从而预估出使用该产品的成本，既能帮助使用者了解该如何核对产品成本，也能帮助使用者决定是否需要采用该产品。声网还提供了如“开发注意事项”和“最佳实践”这两个帮助开发者更好地使用产品功能的模块，和“校验用户权限”、“体验等级协议”和“新产品”等声网特色功能说明；</li>
+<li>Vivox没有提供更新历史、快速开始和功能应用场景这三个即构和声网都有提供的内容模块，这三个模块对于开发者接入产品功能的重要性还是挺高的。更新历史能让开发者了解产品每个版本更新的内容，帮助开发者决定应该使用哪个版本及了解当前版本与最近版本之间的差异，从而决定是否需要更新产品版本。快速开始模块能让第一次使用该产品的开发者快速完成接入流程，既能增强其使用产品的信心，又能降低开发者对于使用产品功能的压力。功能应用场景模块能够帮助开发者快速根据自己产品功能需求特性及应用场景选择最适合自己产品的功能模块。</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h1><p>整体而言，即构科技的产品接入文档结构更加清晰合理，且围绕开发人员在接入产品过程中可能会存在的资料查阅需求提供丰富而又简明扼要的内容说明，对开发者的效率提升帮助作用更大。Vivox更关注向开发者展示内部实现逻辑，让开发者能对所采用功能的具体实现方式有更详细的了解，从而能够更方便开发者设计功能接入逻辑。</p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks for your reward.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/WechatPay.png" alt="Lilac 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/AliPay.png" alt="Lilac 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Lilac
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="1.117.42.182/2021/06/01/接入文档竞品分析/" title="接入文档竞品分析">1.117.42.182/2021/06/01/接入文档竞品分析/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品经理/" rel="tag"><i class="fa fa-tag"></i>产品经理</a>
+          
+            <a href="/tags/竞品分析/" rel="tag"><i class="fa fa-tag"></i>竞品分析</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/05/20/GVoice竞品分析/" rel="next" title="GVoice竞品分析">
+                <i class="fa fa-chevron-left"></i> GVoice竞品分析
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Lilac</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/littleshuang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/44ded48be318" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://1.117.42.182:4000/Prototype/mystuff/" title="我的物品原型图" target="_blank">我的物品原型图</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://1.117.42.182:4000/Prototype/FindStuffsPrd/%E7%9B%AE%E5%BD%95.html" title="i物品产品需求文档" target="_blank">i物品产品需求文档</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://modao.cc/app/N3C7lBAlaaQS3X734hETW8rSVcLffPb?simulator_type=device&sticky#screen=sA1FAF5DD6B1557818312602" title="GVoice Demo" target="_blank">GVoice Demo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://sdk.gcloud.tencent.com/documents/details/%E6%B8%B8%E6%88%8F%E8%AF%AD%E9%9F%B3%20GVoice" title="GVoice 文档" target="_blank">GVoice 文档</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#竞品分析目的"><span class="nav-text">竞品分析目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#竞品选择"><span class="nav-text">竞品选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文档结构对比"><span class="nav-text">文档结构对比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模块详细对比"><span class="nav-text">模块详细对比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lilac</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="Site words total count">34.9k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3mq0IwEVJXVuUieXmjx8xhFx-gzGzoHsz", "J1W3bQg50lfcFl90VIicUwBg");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "default";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomRight";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>

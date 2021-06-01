@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="产品经理,竞品分析,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本文通过对比分析GVoice与Vivox、即构、声网等业界优秀的语音产品在产品功能、支持平台和运营数据等方面的差异，以提炼值得GVoice学习和改进的地方。">
+<meta name="keywords" content="产品经理,竞品分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GVoice竞品分析">
+<meta property="og:url" content="1.117.42.182/2021/05/20/GVoice竞品分析/index.html">
+<meta property="og:site_name" content="Lilac&#39;s Blog">
+<meta property="og:description" content="本文通过对比分析GVoice与Vivox、即构、声网等业界优秀的语音产品在产品功能、支持平台和运营数据等方面的差异，以提炼值得GVoice学习和改进的地方。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://user-images.githubusercontent.com/17395552/118967975-f5d03880-b99d-11eb-85af-48df76f550a9.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/17395552/118967986-f8cb2900-b99d-11eb-99b7-d915939485bd.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/17395552/118967991-fa94ec80-b99d-11eb-8ce9-e4ca21c35f0b.png">
+<meta property="og:updated_time" content="2021-05-26T05:55:39.542Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GVoice竞品分析">
+<meta name="twitter:description" content="本文通过对比分析GVoice与Vivox、即构、声网等业界优秀的语音产品在产品功能、支持平台和运营数据等方面的差异，以提炼值得GVoice学习和改进的地方。">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/17395552/118967975-f5d03880-b99d-11eb-85af-48df76f550a9.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'M4FE8JC0M9',
+      apiKey: '72679fe9b7a2d99c540ae0ca71120401',
+      indexName: 'LilacBlog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="1.117.42.182/2021/05/20/GVoice竞品分析/">
+
+
+
+
+
+  <title>GVoice竞品分析 | Lilac's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b9e3be0ec48968d3210e02ede0ceaab1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/littleshuang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lilac's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">The web home for Lilac</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<style>
+    .pace .pace-progress {
+        background: #ec7571; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #ec7571, 0 0 5px #ec7571; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #ec7571;    /*上边框颜色*/
+        border-left-color: #ec7571;    /*左边框颜色*/
+    }
+</style>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="1.117.42.182/2021/05/20/GVoice竞品分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lilac">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lilac's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">GVoice竞品分析</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-05-20T18:48:38+08:00">
+                2021-05-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/source/categories/产品经理/" itemprop="url" rel="index">
+                    <span itemprop="name">产品经理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+             <span id="/2021/05/20/GVoice竞品分析/" class="leancloud_visitors" data-flag-title="GVoice竞品分析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                <span title="字数统计">
+                  5.2k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                <span title="阅读时长">
+                  18min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文通过对比分析GVoice与Vivox、即构、声网等业界优秀的语音产品在产品功能、支持平台和运营数据等方面的差异，以提炼值得GVoice学习和改进的地方。</p>
+<a id="more"></a>
+
+<h1 id="GVoice竞品分析"><a href="#GVoice竞品分析" class="headerlink" title="GVoice竞品分析"></a><strong>GVoice竞品分析</strong></h1><h2 id="竞品分析目的"><a href="#竞品分析目的" class="headerlink" title="竞品分析目的"></a><strong>竞品分析目的</strong></h2><p>GVoice产品成立于2015年，经过几年发展，产品功能基本能满足腾讯内部游戏的语音交流需求。为了进一步优化游戏玩家的语音交流体验和提升游戏业务的接入体验，因此开展此次竞品分析工作，希望通过对比竞品在产品功能、支持平台和运营数据等方面的差异，提炼值得GVoice学习和改进的地方。</p>
+<h2 id="竞品概述"><a href="#竞品概述" class="headerlink" title="竞品概述"></a><strong>竞品概述</strong></h2><p>本文选取Vivox、即构和声网这三款语音产品作为分析对象（其中，即构和声网主要选取其在游戏语音方面的功能进行分析），主要基于如下考虑：</p>
+<ol>
+<li>这三款产品的产品形态和满足的核心需求相同；</li>
+<li>这三款产品的目标用户群体类似；</li>
+<li>这三款产品是目前市场上规模比较大的产品。</li>
+</ol>
+<h3 id="GVoice"><a href="#GVoice" class="headerlink" title="GVoice"></a><strong>GVoice</strong></h3><p>GVoice成立于2015年，成立至今，一直<strong>致力于改善玩家在游戏中的交流体验</strong>。通过提供丰富多样、全面覆盖游戏应用场景的语音服务，支持常见游戏平台和开发引擎，并提供覆盖全球主要国家和地区的语音网点，深受腾讯内外游戏开发团队的喜欢，目前已为王者荣耀、刺激战场、堡垒之夜等游戏提供语音服务。</p>
+<p>GVoice发展历程：</p>
+<p>2015年组建游戏语音开发团队，专注于开发适合移动游戏领域使用的语音技术；</p>
+<p>2016年联合腾讯云，将语音技术孵化为云服务，并向外部团队开放；</p>
+<p>2018年产品致力于支持全球化发行。</p>
+<h3 id="Vivox"><a href="#Vivox" class="headerlink" title="Vivox"></a><strong>Vivox</strong></h3><p>Vivox成立于2005年，是一款<strong>专注于为游戏行业提供语音和文本通讯服务的产品</strong>。Vivox通过提供易于使用，功能丰富的语音和文本服务，并创造身临其境的多人游戏体验，以提高游戏玩家的参与度和留存率。成立至今，Vivox为诸如Fortnite、PUBG、英雄联盟等世界上最庞大的游戏提供语音和文本聊天功能。</p>
+<p>Vivox发展历程：</p>
+<p>2005-09-19获得600万美元的A轮融资；</p>
+<p>2007-11-01获得780万美元的B轮融资；</p>
+<p>2010-02-02获得680万美元的C轮融资；</p>
+<p>2010-07-13获得200万美元的战略融资；</p>
+<p>2019-01-30被游戏引擎公司Untiy收购。</p>
+<h3 id="即构"><a href="#即构" class="headerlink" title="即构"></a><strong>即构</strong></h3><p>即构科技于2015年6月成立，是一家<strong>全球云通讯服务商</strong>。<strong>即构主要为企业提供互联网+音视频整体解决方案</strong>，覆盖音视频的产生、接入、存储、分发、回放等方面，为企业、移动应用开发者提供实时语音、视频云服务，适用于游戏、社交媒体、在线教育、在线医疗等多个应用领域及相关用户场景。</p>
+<p>即构科技发展历程：</p>
+<p>2015-11-10获得数百万美元的A轮融资；</p>
+<p>2018-01-01获得数千万美元的B轮融资；</p>
+<p>2020-11-02获得5000万美元的C轮融资。</p>
+<h3 id="声网"><a href="#声网" class="headerlink" title="声网"></a><strong>声网</strong></h3><p>声网成立于2013年，是<strong>实时音视频云行业的开创者</strong>。其服务覆盖游戏、社交直播、在线教育、企业协作等10余行业，共计100多种场景。成立至今，已经为全球200多个国家或地区的数十万应用提供音视频云服务。</p>
+<p>声网发展历程：</p>
+<p>2014-02-01获得600万美元的A轮融资；</p>
+<p>2015-09-17获得2000万美元的B轮融资；</p>
+<p>2018-06-12获得3000万美元的B+轮融资；</p>
+<p>2018-06-12获得3000万美元的B+轮融资；</p>
+<p>2018-11-21获得7000万美元的C轮融资；</p>
+<p>2020-06-26获得1.1亿美元的定向增发融资；</p>
+<p>2020-06-26在美国纳斯达克上市。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><p>从产品简介可以看出，GVoice和Vivox均是专注于为游戏行业服务的语音产品，而即构和声网则致力于为全行业提供音视频云服务。由此可见，Vivox是我们的直接竞品，我们可通过详细对比两者在功能、性能、用户评价等方面的差异，发现GVoice可优化和完善的方面。同时，我们可通过分析即构和声网在不同行业所提供的功能，拓宽GVoice产品的发展思路，并着重分析两者为游戏行业提供的解决方案。</p>
+<h2 id="竞品功能对比"><a href="#竞品功能对比" class="headerlink" title="竞品功能对比"></a><strong>竞品功能对比</strong></h2><h3 id="语音功能对比"><a href="#语音功能对比" class="headerlink" title="语音功能对比"></a><strong>语音功能对比</strong></h3><p>考虑到GVoice现阶段主要专注于为游戏行业提供语音服务，因此主要与即构和声网在语音方面提供的功能进行对比分析。</p>
+<p>通过查阅官方资料、体验官方Demo及与支持团队沟通，获知各产品主要语音功能如下。</p>
+<p><img src="https://user-images.githubusercontent.com/17395552/118967975-f5d03880-b99d-11eb-85af-48df76f550a9.png" alt="语音功能对比">        </p>
+<p>为了便于更直观地进行对比分析，将各产品主要语音功能整理到如下功能对比表格中。</p>
+<table>
+<thead>
+<tr>
+<th>主要功能</th>
+<th>GVoice</th>
+<th>Vivox</th>
+<th>即构</th>
+<th>声网</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实时语音房间</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>范围语音</td>
+<td>√</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>加入多房间</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>房间状态管理</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>语音消息</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>语音转文字</td>
+<td>√</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>文字转语音</td>
+<td>√</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>多国语音同传</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>脏词过滤</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>语音举报</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>变声</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>3D语音</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>文本翻译</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>房间成员管理</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>x</td>
+</tr>
+<tr>
+<td>语音管理</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>背景音乐</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>音效处理</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>文本聊天</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>1对1聊天</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>会话管理</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>多用户模式</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>好友管理</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>会话管理</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>多用户登录</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>房间弹幕</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+</tr>
+<tr>
+<td>房间广播</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+</tr>
+<tr>
+<td>混流</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+</tr>
+<tr>
+<td>音质处理</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>通话质量监测</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>音频质量控制</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>流量控制</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+</tr>
+<tr>
+<td>网络探测</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>云代理</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p>从上面的脑图和功能对比表格中可以看出，四款产品均提供了诸如实时语音房间、多房间、房间状态管理、语音管理等基础语音房间功能。GVoice侧重于围绕游戏业务的发展，提供适应其发展的多样化语音玩法，如伴随游戏出海和监管趋严而生的语音同传、脏词过滤、语音举报等功能。Vivox侧重于为游戏业务提供基于语音的社交功能，包括好友管理、语音和文本聊天等。而即构和声网倾向于为全行业提供语音服务，因此主要提供能够满足更广泛应用场景的语音功能，同时考虑到部分场景对音质要求较高，两者均提供有质量监测和网络探测功能。</p>
+<p>下面针对实时语音房间和语音管理这两部分重点功能模块进行探讨：</p>
+<p>艾瑞咨询《中国移动游戏行业研究报告-2020年》显示，2019年中国移动游戏产品畅销榜TOP30主要为中重度手游，该类游戏内玩家间的沟通交流是其必不可少的功能需求。然而相比端游而言，手游内打字系统更加不方便，文字消息完全无法满足沟通的实时性需求，因此实时语音沟通已成为各手游厂商的必然选择。而在提供语音交流时，除了适应游戏应用场景的语音功能外，游戏最关心的便是能否根据当前游戏应用场景对语音进行灵活地控制。因此下面主要针对实时语音房间和语音管理这两部分重点功能进行深入对比分析。<br><img src="https://user-images.githubusercontent.com/17395552/118967986-f8cb2900-b99d-11eb-99b7-d915939485bd.png" alt="2019年中国移动游戏产品畅销榜TOP30">        </p>
+<h3 id="实时语音房间"><a href="#实时语音房间" class="headerlink" title="实时语音房间"></a><strong>实时语音房间</strong></h3><p>不同类型的游戏有不一样的语音交流需求，MOBA、FPS类游戏中，玩家之间对战激烈，同队成员需要能够自由开关麦来实时沟通对敌策略；MMORPG类游戏中，涉及大型团战、小组作战，通常有指挥+战团成员的角色划分。一名主指挥上麦，管理全场的指挥；可能会有多名副指挥反复上下麦的操作，因此游戏语音需要提供麦位管理权限，满足不同游戏角色的沟通、管理需求；吃鸡类游戏中，涉及到地图功能，需要能够模拟现实生活场景，根据游戏内其他玩家与当前玩家的距离远近来决定当前玩家是否能收听到其声音。下面主要针对这三类主要游戏场景下所需的语音功能对几款产品进行对比分析。</p>
+<h4 id="GVoice-1"><a href="#GVoice-1" class="headerlink" title="GVoice"></a><strong>GVoice</strong></h4><p>为了更好地满足不同类型游戏玩家的语音沟通需求，GVoice提供有小队语音，国战语音和范围语音三大实时语音房间类型，以分别满足MOBA类游戏、MMORPG类游戏和吃鸡类游戏的语音需求。小队语音和范围语音房间均能支持500名玩家同时加入同一房间，而国战语音房间允许无限名玩家同时加入同一语音房间，这三类语音房间均支持同时最多有8人发言。GVoice还支持多房间语音功能，允许玩家同时加入1个范围语音房间和若干个小队语音房间，玩家能同时在这多个语音房间中收发语音数据。</p>
+<h4 id="Vivox-1"><a href="#Vivox-1" class="headerlink" title="Vivox"></a><strong>Vivox</strong></h4><p>Vivox的语音房间类型包含普通语音房间、3D语音房间和回声房间。普通语音房间支持无限多个玩家同时加入同一语音房间。3D语音房间与GVoice的范围语音房间类似，主要适用于吃鸡类游戏，不过Vivox的3D语音房间能提供3D语音效果，根据玩家距离远近和方位对声音进行处理，能够营造更加身临其境的语音体验。回声房间即玩家自己说的语音数据能播放给玩家自己听，主要用于游戏上线前的语音测试。在Vivox提供的多房间语音功能中，最多能支持同一玩家同一时刻与10个语音房间的玩家进行交流。</p>
+<h4 id="即构-1"><a href="#即构-1" class="headerlink" title="即构"></a><strong>即构</strong></h4><p>即构最多允许同一时刻有500个玩家加入同一语音房间，且最多支持同时有9名玩家发言。即构提供的多房间功能主要为跨房间连麦和在线教育的超级小班场景服务，该功能最多允许同一玩家同一时刻加入两个语音房间，玩家只能在主房间中发言，但可以收听来自所有房间中其他玩家的语音数据。即构提供有3D语音功能，能够播放3D环绕声，但没有针对吃鸡场景提供范围语音功能。</p>
+<h4 id="声网-1"><a href="#声网-1" class="headerlink" title="声网"></a><strong>声网</strong></h4><p>声网和即构提供的实时语音房间功能较为类似，区别在于声网有专门针对游戏场景对语音功能和性能进行优化，声网的语音房间能支持更高的同时在线和同时发言人数，声网支持范围语音功能，但未提供3D语音功能。具体而言，声网允许无限多玩家同时加入同一语音房间，且允许最多17名玩家同时发言。在声网提供的多房间功能中，玩家能同时加入若干个语音房间，也能收听来自所有房间中玩家的语音数据，但仅能在一个主房间中发言。</p>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a><strong>总结</strong></h4><p>GVoice和Vivox这两款专注于游戏应用场景的语音产品均能满足游戏玩家在这三类不同场景下的语音需求。<strong>相较于GVoice，Vivox的3D语音功能能够给游戏玩家营造一种身临其境的氛围，给予游戏玩家更真实的语音体验</strong>，尤其在吃鸡类游戏中，配合上游戏地图，能让整个游戏体验更加刺激和真实。即构和声网这两款产品更注重语音功能的通用性，且目前主要服务对象集中在在线教育领域和休闲小游戏领域，因此对吃鸡类游戏场景和MMORPG类游戏场景的支持并不是很完善。</p>
+<h3 id="语音处理"><a href="#语音处理" class="headerlink" title="语音处理"></a><strong>语音处理</strong></h3><p>语音相关的属性或处理方式主要包含语音数据采集音量、播放音量、编码相关属性、声道数、变声、混响等，通过设置这些属性，能够改变语音播放效果，改善语音质量或增加语音趣味性。下表详细描述了这四款产品是否支持游戏自己设置相应的语音属性。</p>
+<table>
+<thead>
+<tr>
+<th>语音属性</th>
+<th>GVoice</th>
+<th>Vivox</th>
+<th>即构</th>
+<th>声网</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>采集音量</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>播放音量</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>编码码率</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>编码类型</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>编码模式</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>双声道</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>混流</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+</tr>
+<tr>
+<td>静音某玩家</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>耳返</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>语音算法处理</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>变声</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>混响</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>3D</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>设备状态检测</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>采样率</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p>从上表可以看出，即构和声网这类面向全行业的产品提供了更为丰富的语音属性自定义处理能力，以便于适应不同行业不同应用场景的语音诉求。而GVoice和Vivox这类专注于游戏行业的语音产品则并未提供如此丰富的语音属性自定义选项，因为游戏行业的对语音数据的延时要求比较高，而音质要求没那么高，因此默认设置满足此类要求的码率、编码参数和采样率即可，无需游戏再次进行设置，且游戏语音主要采用扬声器播放，无K歌房间场景的耳返需求。</p>
+<h2 id="其他方面对比"><a href="#其他方面对比" class="headerlink" title="其他方面对比"></a><strong>其他方面对比</strong></h2><h3 id="支持平台对比"><a href="#支持平台对比" class="headerlink" title="支持平台对比"></a><strong>支持平台对比</strong></h3><p>一款语音产品若能支持更丰富的游戏运行平台或游戏开发引擎，则能被更多的游戏开发团队所选择。下表详细列出了这四款语音产品对不同游戏运行平台或游戏开发引擎的支持。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>GVoice</th>
+<th>Vivox</th>
+<th>即构</th>
+<th>声网</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Android</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>Web</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>小程序</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>Switch</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>PlayStation 4</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>PlayStation 5</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Stadia</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Xbox</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Unity</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>Unreal</td>
+<td>√</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Cocos</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>x</td>
+</tr>
+</tbody></table>
+<p>从上表可以看出，Vivox几乎支持所有主流游戏运行平台，包括移动平台Android、iOS，PC平台MacOs、Windows和各大主机平台，而GVoice只支持移动平台Android、iOS和PC平台Windows，相对Vivox来说，GVoice对游戏业务的支持面不够广泛，可适当拓展其广度，以支持主流主机游戏平台。即构和声网则除了支持移动平台和PC平台外，还支持Web、小程序等平台，但也对主机平台缺乏支持，这与这两者的定位比较相符，支持Web和小程序能适应更多非游戏行业业务的需求，且这两者还未涉足主机游戏，因此也暂时无需提供对主机平台的支持。GVoice和Vivox均支持Untiy、Unreal和Cocos这三大主流游戏引擎，而即构和声网则仅支持其中一到两个游戏引擎。</p>
+<h3 id="管理控制台对比"><a href="#管理控制台对比" class="headerlink" title="管理控制台对比"></a><strong>管理控制台对比</strong></h3><p>GVoice、Vivox、即构和声网这四款语音产品均是通过管理控制台为游戏业务提供项目管理、账单管理、运营数据等功能。管理控制台是业务从准备使用语音服务到服务上线后进行费用结算及最后退出使用的全流程中均会接触和关注的一个部分，非常影响用户体验，因此管理控制台如果能给业务提供他们最关心的数据与功能，那么既能给业务留下良好的使用体验，又能降低业务问题咨询量。</p>
+<p>下面的脑图展示了这四款语音产品在管理控制台提供的功能及展示数据。</p>
+<p><img src="https://user-images.githubusercontent.com/17395552/118967991-fa94ec80-b99d-11eb-8ce9-e4ca21c35f0b.png" alt="控制台对比">        </p>
+<p>通过上面的脑图可以看出GVoice和Vivox的管理控制台比较简单，只提供了基本的服务开通和活跃用户数据查询功能。而即构和声网的管理控制台功能比较丰富，不仅有较为全面的项目管理功能，还会提供服务指引入口，帮助用户快速找到所需内容。即构和声网提供的运营数据也比较丰富，支持用户按房间、用户和数据流来查询运营数据，能够让用户更方便快捷地获取到所需数据。</p>
+<p>在即构和声网的管理控制台中还有一个亮点功能，那便是棱镜系统和水晶球系统。这两者所提供的功能类似，均是为开发者提供的音视频通话质量跟踪，故障定位，用户体验追溯的产品，该产品能辅助客户从多维度定位分析音视频流质量数据，聚焦问题范围，促进用户体验优化。</p>
+<h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a><strong>总结</strong></h2><p>本文主要对比分析了GVoice、Vivox、即构和声网在语音功能、支持平台、管理控制台等方面的差异，并详细比较了这四款产品在游戏语音产品最重要的实时语音房间和语音处理功能模块的异同。</p>
+<h3 id="竞品分析结论"><a href="#竞品分析结论" class="headerlink" title="竞品分析结论"></a><strong>竞品分析结论</strong></h3><p>通过对比分析，得出如下结论：</p>
+<ol>
+<li>GVoice和Vivox这两款专注于游戏行业的语音产品在游戏场景下的表现较好，围绕游戏行业提供了比较丰富和实用的产品功能。其中GVoice围绕不同类型游戏的语音诉求提供了不同的语音产品方案，并基于游戏应用场景提供了诸如语音同传、语音魔音等特色功能。Vivox主要围绕游戏应用场景提供基于文本和语音的社交功能。即构和声网这两款产品致力于为所有行业提供音视频云服务，因此主要提供的是更加通用的语音功能，针对游戏应用场景的优化较少；</li>
+<li>相较于面向全行业的语音服务而言，单一游戏行业的语音服务会存在较多共性的语音处理过程，因此，GVoice和Vivox提供的自定义语音处理功能较为简单，而即构和声网提供了非常丰富的自定义语音处理功能；</li>
+<li>针对游戏运行平台，GVoice目前主要支持在移动端运行，Vivox则支持几乎所有游戏运行平台，包括移动平台、PC平台和主机平台。即构和声网主要支持移动平台、PC平台和Web平台。在游戏引擎方面，GVoice和Vivox均支持所有主流游戏引擎，而即构和声网仅支持其中一到两种；</li>
+<li>即构和声网在管理控制台提供了较为丰富的语音数据展示和查询功能，还提供了一个帮助业务发现音视频数据异常和定位故障的产品，用户体验较好。GVoice和Vivox的管理控制台比较简单，目前只提供了活跃用户数查询功能。</li>
+</ol>
+<h3 id="GVoice可改进之处"><a href="#GVoice可改进之处" class="headerlink" title="GVoice可改进之处"></a><strong>GVoice可改进之处</strong></h3><p>通过与Vivox、即构和声网这几款业界优秀的语音产品进行对比分析，发现GVoice针对游戏应用场景提供了较多实用和特色功能，但GVoice在游戏运行平台和运营数据查询等方面的支持还不是很完善，因此建议GVoice后续可优化如下几方面：</p>
+<ol>
+<li>提供3D语音功能，尤其是范围语音房间中，从而给玩家营造身临其境的语音体验；</li>
+<li>考虑到国内流量红利见顶和国内版号趋严，出海已成为公司内外部游戏的重要选择，而海外有很多玩家是通过主机平台玩游戏的，因此可增加对主流主机平台的支持；</li>
+<li>优化管理控制台，给游戏提供更丰富的运营数据，方便游戏了解玩家对语音功能的使用情况，从而辅助游戏进行语音相关决策。</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks for your reward.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/WechatPay.png" alt="Lilac 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/AliPay.png" alt="Lilac 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Lilac
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="1.117.42.182/2021/05/20/GVoice竞品分析/" title="GVoice竞品分析">1.117.42.182/2021/05/20/GVoice竞品分析/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品经理/" rel="tag"><i class="fa fa-tag"></i>产品经理</a>
+          
+            <a href="/tags/竞品分析/" rel="tag"><i class="fa fa-tag"></i>竞品分析</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/09/15/SDK开发之文档/" rel="next" title="SDK 开发之文档">
+                <i class="fa fa-chevron-left"></i> SDK 开发之文档
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/06/01/接入文档竞品分析/" rel="prev" title="接入文档竞品分析">
+                接入文档竞品分析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Lilac</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/littleshuang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/44ded48be318" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://1.117.42.182:4000/Prototype/mystuff/" title="我的物品原型图" target="_blank">我的物品原型图</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://1.117.42.182:4000/Prototype/FindStuffsPrd/%E7%9B%AE%E5%BD%95.html" title="i物品产品需求文档" target="_blank">i物品产品需求文档</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://modao.cc/app/N3C7lBAlaaQS3X734hETW8rSVcLffPb?simulator_type=device&sticky#screen=sA1FAF5DD6B1557818312602" title="GVoice Demo" target="_blank">GVoice Demo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://sdk.gcloud.tencent.com/documents/details/%E6%B8%B8%E6%88%8F%E8%AF%AD%E9%9F%B3%20GVoice" title="GVoice 文档" target="_blank">GVoice 文档</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GVoice竞品分析"><span class="nav-text">GVoice竞品分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#竞品分析目的"><span class="nav-text">竞品分析目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#竞品概述"><span class="nav-text">竞品概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GVoice"><span class="nav-text">GVoice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vivox"><span class="nav-text">Vivox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#即构"><span class="nav-text">即构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声网"><span class="nav-text">声网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#竞品功能对比"><span class="nav-text">竞品功能对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语音功能对比"><span class="nav-text">语音功能对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实时语音房间"><span class="nav-text">实时语音房间</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GVoice-1"><span class="nav-text">GVoice</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vivox-1"><span class="nav-text">Vivox</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#即构-1"><span class="nav-text">即构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声网-1"><span class="nav-text">声网</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结-1"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语音处理"><span class="nav-text">语音处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他方面对比"><span class="nav-text">其他方面对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#支持平台对比"><span class="nav-text">支持平台对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#管理控制台对比"><span class="nav-text">管理控制台对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结-2"><span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#竞品分析结论"><span class="nav-text">竞品分析结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GVoice可改进之处"><span class="nav-text">GVoice可改进之处</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lilac</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="Site words total count">34.9k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3mq0IwEVJXVuUieXmjx8xhFx-gzGzoHsz", "J1W3bQg50lfcFl90VIicUwBg");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "default";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomRight";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>
